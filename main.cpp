@@ -21,7 +21,7 @@ int main(int argc, const char * argv[])
 	cv::VideoCapture cap{argv[1]};
 	cv::Mat frame;
 	cap>>frame;
-	cv::resize(frame, frame, cv::Size(1920/2, 1080/2));
+	// cv::resize(frame, frame, cv::Size(1920/2, 1080/2));
 	cout<<frame.type()<<endl;
 	if (frame.rows == 0 || frame.cols == 0)
            return 0;
@@ -34,7 +34,7 @@ int main(int argc, const char * argv[])
 	for (int k = 0;k<2;k++) 
 	{
 		cap>>frame;
-		cv::resize(frame, frame, cv::Size(1920/2, 1080/2));
+		// cv::resize(frame, frame, cv::Size(1920/2, 1080/2));
 		
 		if (frame.rows == 0 || frame.cols == 0)
             break;
@@ -100,7 +100,7 @@ int main(int argc, const char * argv[])
 	for (;;) 
 	{
 		cap>>frame;
-		cv::resize(frame, frame, cv::Size(1920/2, 1080/2));
+		// cv::resize(frame, frame, cv::Size(1920/2, 1080/2));
 		if (frame.rows == 0 || frame.cols == 0)
             break;
 
@@ -202,7 +202,7 @@ int main(int argc, const char * argv[])
 		// imshow("frame_inter_0",frame_inter_0);
 		// imshow("frame_inter_1",frame_inter_1);
 		// imshow("frame",frame);
-		if (waitKey(10) == 27)break;
+		if (waitKey(30) == 27)break;
 
 		index ++;
 	}
